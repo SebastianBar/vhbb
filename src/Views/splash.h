@@ -31,5 +31,4 @@ private:
 	unsigned int frame_count = 0;
 
 	Texture vhbb_splash;
-	Texture gekihen_splash;
 };
