@@ -90,8 +90,8 @@ void HomebrewView::homebrewInstall() {
 		auto *args = new InstallArguments;
 		args->hb = hb_;
 
-		int install_thid_ = sceKernelCreateThread("install_thread", (SceKernelThreadEntry)install_thread, 0x40, 0x10000, 0, 0, nullptr);
-		sceKernelStartThread(install_thid_, sizeof(InstallArguments), args);
+		int install_this_ = sceKernelCreateThread("install_thread", (SceKernelThreadEntry)install_thread, 0x40, 0x10000, 0, 0, nullptr);
+		sceKernelStartThread(install_this_, sizeof(InstallArguments), args);
         log_printf(DBG_DEBUG, "OK");
 	} catch (const std::exception &ex) {
         log_printf(DBG_ERROR, "%s", ex.what());
