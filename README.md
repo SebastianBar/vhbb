@@ -1,7 +1,12 @@
-# Vita HomeBrew Browser ![GitHub All Releases](https://img.shields.io/github/downloads/devnoname120/vhbb/total.svg)
-
+# Vita HomeBrew Browser
 
 ![Alt text](https://cloud.githubusercontent.com/assets/21164502/24837255/3af41722-1d73-11e7-8aae-5664fec174f3.png "")
+
+## Fork changelog
+This is fork of [devnoname120](https://github.com/devnoname120)'s [vhbb](https://github.com/devnoname120/vhbb).
+
+Changes:
+- Removed Gekihen splash, improving app responsiveness 
 
 ## Prerequisites
 

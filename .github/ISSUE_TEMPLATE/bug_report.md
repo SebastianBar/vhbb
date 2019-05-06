@@ -5,7 +5,7 @@ about: Create a report to help us improve
 ---
 
 <!--Are you sure that you are running the latest version of VHBB?
-If no, download the latest version here https://github.com/devnoname120/vhbb/releases and try again!
+If no, download the latest version here https://github.com/SebastianBar/vhbb/releases and try again!
 -->
 
 **Describe the bug**

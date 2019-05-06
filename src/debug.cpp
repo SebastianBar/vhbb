@@ -35,7 +35,7 @@ int log_init(bool log_to_file)
 		_log_printf(DBG_INFO, "VHBB started.\n");
 		_log_printf(DBG_INFO, "- Version: %s\n", VITA_VERSION);
 		_log_printf(DBG_INFO, "- Commit: %s\n", GIT_COMMIT);
-		_log_printf(DBG_INFO, "- GitHub: %s%s\n", "https://github.com/devnoname120/vhbb/tree/", GIT_COMMIT);
+		_log_printf(DBG_INFO, "- GitHub: %s%s\n", "https://github.com/SebastianBar/vhbb/tree/", GIT_COMMIT);
 
         SceKernelFwInfo data;
         data.size = sizeof(SceKernelFwInfo);
