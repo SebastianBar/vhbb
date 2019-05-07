@@ -14,7 +14,7 @@ public:
 	int HandleInput(int focus, const Input& input) override;
 	int Display() override;
 
-    void AddView(std::shared_ptr<View> view);
+    void AddView(const std::shared_ptr<View>& view);
     void FlushQueue();
     bool HasActivity();
 

@@ -34,12 +34,12 @@ void IMEView::closeIMEView() {
 	sceImeDialogTerm();
 }
 
-void IMEView::prepare(std::shared_ptr<IMEViewResult> result, std::string title, std::string initialText,
+void IMEView::prepare(std::shared_ptr<IMEViewResult> result, const std::string& title, const std::string& initialText,
                       SceUInt32 maxInputLength) {
 	log_printf(DBG_DEBUG, "Created IMEView \"%s\"", title.c_str());
 	std::wstring_convert<std::codecvt_utf8_utf16<char16_t>, char16_t> converter;
 	_title = converter.from_bytes(title);
-	_result = result;
+	_result = std::move(result);
 	if (!initialText.empty())
 		log_printf(DBG_DEBUG, "initialText set \"%s\"", initialText.c_str());
 	_initialText = converter.from_bytes(initialText);

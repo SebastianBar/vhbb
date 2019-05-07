@@ -26,7 +26,7 @@ private:
 class WriterFileClass
 {
 public:
-    explicit WriterFileClass(std::string dest);
+    explicit WriterFileClass(const std::string& dest);
 
     ~WriterFileClass() {
         if(m_fd >= 0) {
@@ -51,7 +51,7 @@ private:
     int m_fd = -1;
 };
 
-WriterFileClass::WriterFileClass(std::string dest) {
+WriterFileClass::WriterFileClass(const std::string& dest) {
     m_fd = sceIoOpen(dest.c_str(), SCE_O_WRONLY | SCE_O_CREAT | SCE_O_TRUNC, 0777);
 
     if (m_fd < 0)
@@ -102,7 +102,7 @@ Network::~Network()
 
 }
 
-int Network::Download(std::string url, std::string dest, InfoProgress *progress)
+int Network::Download(const std::string& url, const std::string& dest, InfoProgress *progress)
 {
     log_printf(DBG_DEBUG, "Downloading %s to %s", url.c_str(), dest.c_str());
 
@@ -214,7 +214,7 @@ InternetStatus Network::TestConnection()
 
     buf[read] = '\0';
 
-    if (strncmp(buf, PORTAL_DETECT_STR, strlen(PORTAL_DETECT_STR))) {
+    if (strncmp(buf, PORTAL_DETECT_STR, strlen(PORTAL_DETECT_STR)) != 0) {
         log_printf(DBG_DEBUG, "Unexpected portal detection response. Expected: \"%s\", got: \"%s\"", PORTAL_DETECT_STR, buf);
         ret = INTERNET_STATUS_HOTSPOT_PAGE;
         goto clean;

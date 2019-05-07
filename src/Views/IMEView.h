@@ -40,7 +40,7 @@ public:
 private:
 	std::shared_ptr<IMEView> me_ptr;
 
-	void prepare(std::shared_ptr<IMEViewResult> result, std::string title, std::string initialText,
+	void prepare(std::shared_ptr<IMEViewResult> result, const std::string& title, const std::string& initialText,
 	             SceUInt32 maxInputLength);
 
 	std::basic_string<char16_t> _title;

@@ -16,10 +16,10 @@
 
 class ListView: public View {
 public:
-	explicit ListView(std::vector<Homebrew> homebrews);
+	explicit ListView(const std::vector<Homebrew>& homebrews);
 
 	int HandleInput(int focus, const Input& input) override;
-	virtual int Display() override;
+	int Display() override;
 
 	virtual void SignalSelected() { log_printf(DBG_DEBUG, "ListView::SignalSelected"); };
 	virtual void SignalDeselected() { log_printf(DBG_DEBUG, "ListView::SignalDeselected"); };

@@ -19,7 +19,7 @@ class Homebrew;
 
 
 struct IsNewer : public std::unary_function<bool, bool> {
-    IsNewer(bool dsc) : dsc_(dsc) {}
+    explicit IsNewer(bool dsc) : dsc_(dsc) {}
     bool operator()(const Homebrew &hb1, const Homebrew &hb2) const;
 
     bool dsc_;
@@ -30,4 +30,4 @@ template<>
 struct convert<Date> {
   static bool decode(const Node& node, Date& date);
 };
-};
+}

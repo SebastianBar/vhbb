@@ -6,7 +6,7 @@
 #include <texture.h>
 
 #define SPLASH_FADING_STEP_SIZE 4
-#define SPLASH_STATIC_DURATION_IN_FRAMES 2*60
+#define SPLASH_STATIC_DURATION_IN_FRAMES (2*60)
 
 typedef enum {
 	STEP_FADING_IN,

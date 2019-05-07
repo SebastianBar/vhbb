@@ -183,7 +183,7 @@ int makeHeadBin()
     return 0;
 }
 
-VitaPackage::VitaPackage(const std::string vpk) :
+VitaPackage::VitaPackage(const std::string& vpk) :
     vpk_(vpk)
 {
 

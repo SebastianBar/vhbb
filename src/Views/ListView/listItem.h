@@ -11,7 +11,7 @@
 
 class ListItem {
 public:
-	explicit ListItem(Homebrew hb);
+	explicit ListItem(const Homebrew& hb);
 
 	int Display(int posY, int highlight, int highlightAlpha);
 

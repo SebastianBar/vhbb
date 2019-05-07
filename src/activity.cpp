@@ -46,7 +46,7 @@ int Activity::Display()
 }
 
 
-void Activity::AddView(std::shared_ptr<View> view)
+void Activity::AddView(const std::shared_ptr<View>& view)
 {
     std::lock_guard<std::mutex> lock(mtx_);
 

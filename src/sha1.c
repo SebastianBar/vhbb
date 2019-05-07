@@ -15,7 +15,7 @@
 #include "sha1.h"
 
 /****************************** MACROS ******************************/
-#define ROTLEFT(a, b) ((a << b) | (a >> (32 - b)))
+#define ROTLEFT(a, b) (((a) << (b)) | ((a) >> (32 - (b))))
 
 /*********************** FUNCTION DEFINITIONS ***********************/
 void sha1_transform(SHA1_CTX *ctx, const BYTE data[])

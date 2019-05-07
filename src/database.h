@@ -64,7 +64,7 @@ struct HomebrewSearchRating {
 
 
 struct SearchQuery : public std::unary_function<std::string, HomebrewSearchRating> {
-	SearchQuery(const std::string &query);
+	explicit SearchQuery(const std::string &query);
 	HomebrewSearchRating operator()(const Homebrew &hb) const;
 
 	std::string query_;

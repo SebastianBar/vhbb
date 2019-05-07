@@ -10,7 +10,7 @@ extern unsigned char _binary_assets_spr_img_itm_label_port_png_start;
 extern unsigned char _binary_assets_spr_img_itm_label_emu_png_start;
 extern unsigned char _binary_assets_spr_img_itm_label_util_png_start;
 
-ListItem::ListItem(Homebrew hb) :
+ListItem::ListItem(const Homebrew& hb) :
 	homebrew(hb),
 	font_22(Font(std::string(FONT_DIR "segoeui.ttf"), 22)),
     font_32(Font(std::string(FONT_DIR "segoeui.ttf"), 32)),

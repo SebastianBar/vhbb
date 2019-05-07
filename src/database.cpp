@@ -72,7 +72,7 @@ int Database::DownloadIcons()
 		sceIoClose(fd);
 	}
 
-    for (auto hb : homebrews) {
+    for (const auto& hb : homebrews) {
 		std::string path = ICONS_FOLDER + "/" + hb.icon;
 
 		if (access(path.c_str(), F_OK) == -1) {

@@ -10,7 +10,7 @@
 #define CAT_X 0
 #define CAT_Y 30
 #define CAT_HEIGHT 49
-#define CAT_AUTO_WIDTH -1
+#define CAT_AUTO_WIDTH (-1)
 
 typedef enum {
 	NEW,
@@ -35,7 +35,7 @@ struct CategoryTab {
 class CategoryView: public View {
 public:
 	CategoryView();
-	~CategoryView();
+	~CategoryView() override;
 
 	int HandleInput(int focus, const Input& input) override;
 	int Display() override;

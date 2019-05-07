@@ -82,7 +82,7 @@ int ListView::updateScrollSpeed(double &scrollSpeed, unsigned long timeDif)
 	return 0;
 }
 
-ListView::ListView(std::vector<Homebrew> homebrews):
+ListView::ListView(const std::vector<Homebrew>& homebrews):
 	font_43(Font(std::string(FONT_DIR "segoeui.ttf"), 43))
 {
     log_printf(DBG_DEBUG, "posY: %d", posY);
@@ -137,7 +137,7 @@ int ListView::HandleInput(int focus, const Input& input)
 			//log_printf(DEBUG, "speed: %f", fabs(touchSpeedY));
 
 			double touchSpeedY;
-			input.TouchSpeed(NULL, &touchSpeedY, NULL);
+			input.TouchSpeed(nullptr, &touchSpeedY, nullptr);
 
 			if (input.TouchNewMovement() && fabs(touchSpeedY) != 0.) {
 				preSelectedItem = -1;
@@ -154,7 +154,7 @@ int ListView::HandleInput(int focus, const Input& input)
 				double touchDifY;
 				unsigned long timeDif2;
 
-				input.TouchDifference(NULL, &touchDifY, &timeDif2);
+				input.TouchDifference(nullptr, &touchDifY, &timeDif2);
 				posY = std::min(std::max<int>(ITEM_HEIGHT*listItems.size() - LIST_HEIGHT, 0),
 								std::max<int>(0, posY - touchDifY));
 				scrollSpeed = -touchSpeedY;
