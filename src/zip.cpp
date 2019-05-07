@@ -12,7 +12,7 @@
 #define READ_SIZE 8192
 
 static void mkdir_rec(const char *dir) {
-        char tmp[256];
+        char tmp[512];
         char *p = nullptr;
         size_t len;
 

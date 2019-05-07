@@ -171,7 +171,7 @@ InternetStatus Network::TestConnection()
     int req = -1;
     int read;
     int sendRes;
-    int res = -1;
+    int res;
     int statusCode = 0;
     uint64_t contentLength;
     char buf[32] = {0};

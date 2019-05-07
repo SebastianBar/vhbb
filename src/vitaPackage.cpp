@@ -183,8 +183,6 @@ int makeHeadBin()
     return 0;
 }
 
-#define ntohl __builtin_bswap32
-
 VitaPackage::VitaPackage(const std::string vpk) :
     vpk_(vpk)
 {
@@ -228,7 +226,7 @@ int VitaPackage::Install(InfoProgress *progress)
     vpk_file.Unzip(PACKAGE_TEMP_FOLDER, &progress2);
     sceIoRemove(vpk_.c_str());
 
-    progress->message("Installing...");
+    if (progress) progress->message("Installing...");
     ret = makeHeadBin();
     if (ret < 0) {
         log_printf(DBG_ERROR, "Can't make head.bin for : 0x%08X", vpk_.c_str(), ret);
@@ -236,7 +234,7 @@ int VitaPackage::Install(InfoProgress *progress)
     }
 
     InfoProgress progress3;
-    if(progress) progress3 = progress->Range(60, 100);
+    if (progress) progress3 = progress->Range(60, 100);
     ret = scePromoterUtilityPromotePkg(PACKAGE_TEMP_FOLDER.c_str(), 0);
     if (ret < 0) {
         log_printf(DBG_ERROR, "Can't Promote %s: scePromoterUtilityPromotePkgWithRif() = 0x%08X", vpk_.c_str(), ret);
