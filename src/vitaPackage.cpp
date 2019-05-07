@@ -4,7 +4,7 @@
 #include "filesystem.h"
 
 #include <psp2/promoterutil.h>
- #include <utility>
+
 #define ntohl __builtin_bswap32
 
 extern unsigned char _binary_assets_head_bin_start;

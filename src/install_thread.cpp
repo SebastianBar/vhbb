@@ -1,11 +1,9 @@
 #include "install_thread.h"
-#include <global_include.h>
 
 #include <activity.h>
 #include <Views/ProgressView/progressView.h>
 #include <network.h>
 #include <vitaPackage.h>
-#include "infoProgress.h"
 #include "zip.h"
 
 

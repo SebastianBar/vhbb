@@ -1,5 +1,4 @@
 #include "background.h"
-#include <texture.h>
 #include "mainView.h"
 
 MainView::MainView() = default;

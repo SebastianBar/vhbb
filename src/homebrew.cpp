@@ -2,8 +2,6 @@
 
 #include <psp2/promoterutil.h>
 
-#include "date.h"
-
 bool Homebrew::IsInstalled()
 {
     // FIXME Don't reload the module every time

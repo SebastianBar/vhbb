@@ -1,8 +1,5 @@
 #include "listItem.h"
 
-#include <texture.h>
-#include <font.h>
-
 extern unsigned char _binary_assets_spr_img_itm_panel_png_start;
 extern unsigned char _binary_assets_spr_img_itm_panel_highlight_png_start;
 extern unsigned char _binary_assets_spr_img_itm_label_game_png_start;

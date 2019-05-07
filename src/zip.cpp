@@ -1,13 +1,5 @@
 #include "zip.h"
 
-#include <cstdio>
-#include <cstring>
-
-#include <global_include.h>
-
-#include <minizip/unzip.h>
-#include "infoProgress.h"
-
 #define DIR_DELIMITER '/'
 #define MAX_FILENAME 512
 #define READ_SIZE 8192

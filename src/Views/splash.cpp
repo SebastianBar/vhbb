@@ -1,6 +1,4 @@
 #include "splash.h"
-#include <texture.h>
-#include <algorithm>
 
 extern unsigned char _binary_assets_spr_img_splash_png_start;
 

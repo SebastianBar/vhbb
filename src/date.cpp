@@ -1,7 +1,5 @@
 #include "date.h"
 
-#include <global_include.h>
-
 Date::Date() = default;
 
 bool IsNewer::operator()(const Homebrew &hb1, const Homebrew &hb2) const {
@@ -32,9 +30,9 @@ bool IsNewer::operator()(const Homebrew &hb1, const Homebrew &hb2) const {
 namespace YAML {
     bool convert<Date>::decode(const Node& node, Date& date) {
         date.str = node.as<std::string>();
-        date.year = (int)strtol(date.str.substr(0, 4).c_str(), (char **)NULL, 10);
-        date.month = (int)strtol(date.str.substr(5, 2).c_str(), (char **)NULL, 10);
-        date.day = (int)strtol(date.str.substr(8, 2).c_str(), (char **)NULL, 10);
+        date.year = (int)strtol(date.str.substr(0, 4).c_str(), (char **)nullptr, 10);
+        date.month = (int)strtol(date.str.substr(5, 2).c_str(), (char **)nullptr, 10);
+        date.day = (int)strtol(date.str.substr(8, 2).c_str(), (char **)nullptr, 10);
         return true;
     }
 }

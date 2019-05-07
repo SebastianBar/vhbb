@@ -2,8 +2,6 @@
 
 #include "progressView.h"
 
-#include <font.h>
-
 extern unsigned char _binary_assets_spr_img_dialog_progress_bg_png_start;
 extern unsigned char _binary_assets_spr_img_dialog_progress_bar_png_start;
 extern unsigned char _binary_assets_spr_img_dialog_progress_bar_glow_png_start;

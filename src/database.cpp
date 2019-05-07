@@ -1,9 +1,7 @@
 #include "database.h"
-#include <global_include.h>
 
 #include "zip.h"
 #include "network.h"
-#include "homebrew.h"
 
 bool IsVHBB(const Homebrew &hb)
 {

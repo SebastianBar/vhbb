@@ -2,10 +2,8 @@
 
 #include <vitaPackage.h>
 #include <activity.h>
-#include <Views/ProgressView/progressView.h>
 #include <install_thread.h>
 
-#include <texture.h>
 #include <network.h>
 
 extern unsigned char _binary_assets_spr_img_preview_infobg_png_start;

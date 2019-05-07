@@ -1,14 +1,11 @@
 #include <utility>
 
-#include <utility>
-
 #include "network.h"
 
 
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
 #include <curlpp/Options.hpp>
-#include <curlpp/Exception.hpp>
 
 class ProgressClass {
 public:

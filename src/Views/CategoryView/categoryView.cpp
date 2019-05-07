@@ -1,10 +1,5 @@
 #include "categoryView.h"
 
-#include <screen.h>
-#include <database.h>
-#include <date.h>
-#include <activity.h>
-
 extern unsigned char _binary_assets_spr_img_catbar_png_start;
 extern unsigned char _binary_assets_spr_img_catbar_highlight_png_start;
 extern unsigned char _binary_assets_spr_img_catbar_sep_png_start;
