@@ -29,7 +29,7 @@ int StatusBar::Display()
 	// Background
 	vita2d_draw_rectangle(0, 0, SCREEN_WIDTH, STATUSBAR_HEIGHT, COLOR_BLACK);
 	
-	font_22.Draw(Point(15, 22), "Vita HomeBrew Browser", COLOR_WHITE);
+	font_22.Draw(Point(15, 22), "Vita Homebrew Browser", COLOR_WHITE);
 
 	displayBattery();
 	displayDate();
