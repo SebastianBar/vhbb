@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
 
 #include <global_include.h>
 
@@ -11,11 +11,11 @@
 
 class Zipfile {
 public:
-  Zipfile(const std::string zip_path);
+  explicit Zipfile(std::string zip_path);
   ~Zipfile();
 
-  int Unzip(const std::string outpath, InfoProgress progress);
-  int Unzip(const std::string outpath, InfoProgress *progress = nullptr);
+  int Unzip(std::string outpath, InfoProgress progress);
+  int Unzip(std::string outpath, InfoProgress *progress = nullptr);
 
   int UncompressedSize(InfoProgress progress);
   int UncompressedSize(InfoProgress *progress = nullptr);

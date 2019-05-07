@@ -22,13 +22,13 @@
 #include <mutex>
 #include <algorithm>
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdarg>
+#include <cstring>
+#include <cstdlib>
 #include <unistd.h>
 #include <malloc.h>
-#include <math.h>
+#include <cmath>
 #include <sys/stat.h>
 
 #include <psp2/appmgr.h>
