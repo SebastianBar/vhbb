@@ -7,7 +7,7 @@
 
 bool IsVHBB(const Homebrew &hb)
 {
-	return hb.titleid == "VHBB00001";
+	return hb.titleid == "VHBBCLN01";
 }
 
 Database::Database(const std::string &db_path) : db(YAML::LoadFile(db_path))

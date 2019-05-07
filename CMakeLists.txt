@@ -17,8 +17,8 @@ set(ENV{PKG_CONFIG_PATH} "$ENV{VITASDK}/arm-vita-eabi/lib/pkgconfig")
 include(FindPkgConfig)
 
 set(VITA_APP_NAME "Vita Homebrew Browser")
-set(VITA_TITLEID  "VHBB00001")
-set(VITA_VERSION "10.83")
+set(VITA_TITLEID  "VHBBCLN01")
+set(VITA_VERSION "00.83")
 add_definitions(-DVITA_VERSION="${VITA_VERSION}")
 
 option(DEBUGNET "Enable debugnet for logging" ON)

@@ -36,7 +36,7 @@ To run VHBB:
 	- start an FTP server on your vita, for example [VitaShell](https://github.com/TheOfficialFloW/VitaShell/releases).
 	- upload the vpk to the vita using a FTP client.
 - install the .vpk on your vita using a vpk installer, for example [VitaShell](https://github.com/TheOfficialFloW/VitaShell/releases).
-- a new folder will be created under `ux0:/app/` named `/VHBB00001/`.
+- a new folder will be created under `ux0:/app/` named `/VHBBCLN01/`.
 
 You can also use [PSP2SHELL](https://github.com/Cpasjuste/PSP2SHELL#readme) in order to send and reload the application easily after compilation:
 
