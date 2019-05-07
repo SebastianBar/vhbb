@@ -53,4 +53,4 @@ bool convert<Homebrew>::decode(const Node& node, Homebrew& hb) {
 
   return true;
 }
-};
+}

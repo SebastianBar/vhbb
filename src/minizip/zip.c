@@ -206,7 +206,7 @@ local void free_datablock(linkedlist_datablock_internal* ldi)
     while (ldi != NULL)
     {
         linkedlist_datablock_internal* ldinext = ldi->next_datablock;
-        TRYFREE(ldi);
+        TRYFREE(ldi)
         ldi = ldinext;
     }
 }
@@ -590,7 +590,7 @@ local ZPOS64_T zip64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_f
 
     if (ZSEEK64(*pzlib_filefunc_def, filestream, 0, ZLIB_FILEFUNC_SEEK_END) != 0)
     {
-        TRYFREE(buf);
+        TRYFREE(buf)
         return 0;
     }
 
@@ -628,7 +628,7 @@ local ZPOS64_T zip64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_f
         if (pos_found != 0)
             break;
     }
-    TRYFREE(buf);
+    TRYFREE(buf)
     return pos_found;
 }
 
@@ -849,7 +849,7 @@ extern zipFile ZEXPORT zipOpen4(const void *pathname, int append, ZPOS64_T disk_
         if (err != ZIP_OK)
         {
             ZCLOSE64(ziinit.z_filefunc, ziinit.filestream);
-            TRYFREE(zi);
+            TRYFREE(zi)
             return NULL;
         }
 
@@ -2038,9 +2038,9 @@ extern int ZEXPORT zipClose2_64(zipFile file, const char* global_comment, uLong 
         err = ZIP_ERRNO;
 
 #ifndef NO_ADDFILEINEXISTINGZIP
-    TRYFREE(zi->globalcomment);
+    TRYFREE(zi->globalcomment)
 #endif
-    TRYFREE(zi);
+    TRYFREE(zi)
 
     return err;
 }

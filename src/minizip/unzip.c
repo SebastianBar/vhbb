@@ -313,7 +313,7 @@ local ZPOS64_T unz64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_f
 
     if (ZSEEK64(*pzlib_filefunc_def, filestream, 0, ZLIB_FILEFUNC_SEEK_END) != 0)
     {
-        TRYFREE(buf);
+        TRYFREE(buf)
         return 0;
     }
 
@@ -351,7 +351,7 @@ local ZPOS64_T unz64local_SearchCentralDir(const zlib_filefunc64_32_def* pzlib_f
         if (pos_found != 0)
             break;
     }
-    TRYFREE(buf);
+    TRYFREE(buf)
     return pos_found;
 }
 
@@ -604,7 +604,7 @@ extern int ZEXPORT unzClose(unzFile file)
 
     s->filestream = NULL;
     s->filestream_with_CD = NULL;
-    TRYFREE(s);
+    TRYFREE(s)
     return UNZ_OK;
 }
 
@@ -1153,6 +1153,7 @@ extern int ZEXPORT unzOpenCurrentFile3(unzFile file, int* method, int* level, in
           case 6 : *level = 1; break;
           case 4 : *level = 2; break;
           case 2 : *level = 9; break;
+          default : break;
         }
     }
 
@@ -1627,7 +1628,7 @@ extern int ZEXPORT unzCloseCurrentFile(unzFile file)
         }
     }
 
-    TRYFREE(pfile_in_zip_read_info->read_buffer);
+    TRYFREE(pfile_in_zip_read_info->read_buffer)
     pfile_in_zip_read_info->read_buffer = NULL;
     if (pfile_in_zip_read_info->stream_initialised == Z_DEFLATED)
         inflateEnd(&pfile_in_zip_read_info->stream);
@@ -1637,7 +1638,7 @@ extern int ZEXPORT unzCloseCurrentFile(unzFile file)
 #endif
 
     pfile_in_zip_read_info->stream_initialised = 0;
-    TRYFREE(pfile_in_zip_read_info);
+    TRYFREE(pfile_in_zip_read_info)
 
     s->pfile_in_zip_read = NULL;
 

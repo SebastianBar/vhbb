@@ -26,7 +26,7 @@ bool IsNewer::operator()(const Homebrew &hb1, const Homebrew &hb2) const {
         }
     }
 
-    return dsc_? !res : res;
+    return dsc_ == !res;
 }
 
 namespace YAML {
@@ -37,4 +37,4 @@ bool convert<Date>::decode(const Node& node, Date& date) {
     date.day = std::atoi(date.str.substr(8, 2).c_str());
     return true;
 }
-};
+}

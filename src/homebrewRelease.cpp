@@ -11,4 +11,4 @@ bool convert<HomebrewRelease>::decode(const Node& node, HomebrewRelease& hbrel) 
   hbrel.downloads = node["downloads"].as<HomebrewDownload>();
   return true;
 }
-};
+}
