@@ -23,8 +23,7 @@ void debug_start() {
   memset(&eventParam, 0, sizeof(SceAppUtilAppEventParam));
   int retReceive = sceAppUtilReceiveAppEvent(&eventParam);
 
-  // 0x05 means launched from livearea with params (currently only possible param is -file_logging)
-  log_init(retInit < 0 || retReceive < 0 || eventParam.type == 0x05);
+  log_init(retInit < 0 || retReceive < 0);
 }
 
 void network_test() {
