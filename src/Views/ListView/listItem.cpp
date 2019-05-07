@@ -12,8 +12,8 @@ extern unsigned char _binary_assets_spr_img_itm_label_util_png_start;
 
 ListItem::ListItem(const Homebrew& hb) :
 	homebrew(hb),
-	font_22(Font(std::string(FONT_DIR "segoeui.ttf"), 22)),
-    font_32(Font(std::string(FONT_DIR "segoeui.ttf"), 32)),
+	font_22(Font(std::string(FONT_DIR FONT_NAME), 22)),
+    font_32(Font(std::string(FONT_DIR FONT_NAME), 32)),
     img_itm_panel(Texture(&_binary_assets_spr_img_itm_panel_png_start)),
     img_itm_panel_highlight(Texture(&_binary_assets_spr_img_itm_panel_highlight_png_start)),
     img_icon_(Texture(ICONS_FOLDER + "/" + hb.icon)),

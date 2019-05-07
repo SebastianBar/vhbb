@@ -31,9 +31,9 @@ std::string wrapDescription(std::string str, size_t width) {
 
 
 HomebrewView::HomebrewView(const Homebrew& hb) :
-	font_20(Font(std::string(FONT_DIR "segoeui.ttf"), 20)),
-	font_25(Font(std::string(FONT_DIR "segoeui.ttf"), 25)),
-	font_40(Font(std::string(FONT_DIR "segoeui.ttf"), 40)),
+	font_20(Font(std::string(FONT_DIR FONT_NAME), 20)),
+	font_25(Font(std::string(FONT_DIR FONT_NAME), 25)),
+	font_40(Font(std::string(FONT_DIR FONT_NAME), 40)),
 
 	img_preview_infobg(Texture(&_binary_assets_spr_img_preview_infobg_png_start)),
 	img_preview_btn_download(Texture(&_binary_assets_spr_img_preview_btn_download_png_start)),

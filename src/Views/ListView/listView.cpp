@@ -83,7 +83,7 @@ int ListView::updateScrollSpeed(double &scrollSpeed, unsigned long timeDif)
 }
 
 ListView::ListView(const std::vector<Homebrew>& homebrews):
-	font_43(Font(std::string(FONT_DIR "segoeui.ttf"), 43))
+	font_43(Font(std::string(FONT_DIR FONT_NAME), 43))
 {
     log_printf(DBG_DEBUG, "posY: %d", posY);
     log_printf(DBG_DEBUG, "homebrews size: %d", homebrews.size());

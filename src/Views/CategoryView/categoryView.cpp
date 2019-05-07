@@ -51,7 +51,7 @@ int CategoryView::touchToCat(const Input &input)
 }
 
 CategoryView::CategoryView() :
-	font_33(Font(std::string(FONT_DIR "segoeui.ttf"), 33)),
+	font_33(Font(std::string(FONT_DIR FONT_NAME), 33)),
 	img_catbar(Texture(&_binary_assets_spr_img_catbar_png_start)),
 	img_catbar_highlight(Texture(&_binary_assets_spr_img_catbar_highlight_png_start)),
 	img_catbar_sep(Texture(&_binary_assets_spr_img_catbar_sep_png_start)),

@@ -151,7 +151,7 @@ vita_create_vpk(${SHORT_NAME}.vpk ${VITA_TITLEID} ${SHORT_NAME}.self
   FILE sce_sys/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
 
   FILE assets/icons.zip resources/icons.zip
-  FILE assets/fonts/segoeui.ttf resources/fonts/segoeui.ttf
+  FILE assets/fonts/helvetica.ttf resources/fonts/helvetica.ttf
 )
 
 get_filename_component(psvitaipFilePath psvitaip.txt REALPATH)

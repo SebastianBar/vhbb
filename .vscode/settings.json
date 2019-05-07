@@ -39,7 +39,8 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "__config": "cpp",
-        "__nullptr": "cpp"
+        "__nullptr": "cpp",
+        "__locale": "cpp"
     },
     "cmake.useCMakeServer": true
 }

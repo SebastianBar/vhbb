@@ -5,6 +5,7 @@
 #include "shapes.h"
 
 #define FONT_DIR "ux0:/app/VHBBCLN01/resources/fonts/"
+#define FONT_NAME "helvetica.ttf"
 
 class Font {
 public:
