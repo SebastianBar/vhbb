@@ -1,7 +1,7 @@
 #include "zip.h"
 
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
 
 #include <global_include.h>
 
@@ -38,7 +38,7 @@ std::string dirnameOf(const std::string& fname)
 }
 
 
-Zipfile::Zipfile(const std::string zip_path)
+Zipfile::Zipfile(const std::string& zip_path)
 {
     zipfile_ = unzOpen(zip_path.c_str());
     if (!zipfile_)
@@ -60,12 +60,12 @@ Zipfile::~Zipfile()
     if(zipfile_) unzClose(zipfile_);
 }
 
-int Zipfile::Unzip(const std::string outpath, InfoProgress progress)
+int Zipfile::Unzip(const std::string& outpath, InfoProgress progress)
 {
     return Unzip(outpath, &progress);
 }
 
-int Zipfile::Unzip(const std::string outpath, InfoProgress *progress)
+int Zipfile::Unzip(const std::string& outpath, InfoProgress *progress)
 {
     if (uncompressed_size_ == 0) {
         if (progress) {

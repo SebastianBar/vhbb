@@ -30,11 +30,11 @@ bool IsNewer::operator()(const Homebrew &hb1, const Homebrew &hb2) const {
 }
 
 namespace YAML {
-bool convert<Date>::decode(const Node& node, Date& date) {
-    date.str = node.as<std::string>();
-    date.year = std::atoi(date.str.substr(0, 4).c_str());
-    date.month = std::atoi(date.str.substr(5, 2).c_str());
-    date.day = std::atoi(date.str.substr(8, 2).c_str());
-    return true;
-}
+    bool convert<Date>::decode(const Node& node, Date& date) {
+        date.str = node.as<std::string>();
+        date.year = (int)strtol(date.str.substr(0, 4).c_str(), (char **)NULL, 10);
+        date.month = (int)strtol(date.str.substr(5, 2).c_str(), (char **)NULL, 10);
+        date.day = (int)strtol(date.str.substr(8, 2).c_str(), (char **)NULL, 10);
+        return true;
+    }
 }

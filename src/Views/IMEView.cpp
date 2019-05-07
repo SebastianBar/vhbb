@@ -19,8 +19,8 @@ IMEView::IMEView() {
 }
 
 
-void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, std::string title, SceUInt32 maxInputLength) {
-	openIMEView(std::move(result), std::move(title), "", maxInputLength);
+void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title, SceUInt32 maxInputLength) {
+	openIMEView(std::move(result), title, "", maxInputLength);
 }
 
 void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title, const std::string& initialText,

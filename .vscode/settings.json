@@ -37,7 +37,9 @@
         "initializer_list": "cpp",
         "new": "cpp",
         "type_traits": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp"
     },
     "cmake.useCMakeServer": true
 }

@@ -8,9 +8,9 @@ public:
 
 	std::string str;
 
-    int year;
-    int month;
-    int day;
+    int year{};
+    int month{};
+    int day{};
 };
 
 class Homebrew;

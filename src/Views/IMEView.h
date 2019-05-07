@@ -28,7 +28,7 @@ struct IMEViewResult {
 class IMEView : Singleton<IMEView>, public View {
 public:
 	IMEView();
-	static void openIMEView(std::shared_ptr<IMEViewResult> result, std::string title,
+	static void openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title,
 	                        SceUInt32 maxInputLength);
 	static void openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title,
 	                        const std::string& initialText = "", SceUInt32 maxInputLength = SCE_IME_DIALOG_MAX_TEXT_LENGTH);
@@ -45,7 +45,7 @@ private:
 
 	std::basic_string<char16_t> _title;
 	std::basic_string<char16_t> _initialText;
-	SceUInt32 _maxTextLength;
+	SceUInt32 _maxTextLength{};
 	SceWChar16 *_input_text_buffer_utf16 = nullptr;
 	std::string _input_text_buffer_utf8;
 	IMEViewStatus _status = IMEVIEW_STATUS_NONE;

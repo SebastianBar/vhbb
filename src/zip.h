@@ -11,11 +11,11 @@
 
 class Zipfile {
 public:
-  explicit Zipfile(std::string zip_path);
+  explicit Zipfile(const std::string& zip_path);
   ~Zipfile();
 
-  int Unzip(std::string outpath, InfoProgress progress);
-  int Unzip(std::string outpath, InfoProgress *progress = nullptr);
+  int Unzip(const std::string& outpath, InfoProgress progress);
+  int Unzip(const std::string& outpath, InfoProgress *progress = nullptr);
 
   int UncompressedSize(InfoProgress progress);
   int UncompressedSize(InfoProgress *progress = nullptr);
@@ -23,5 +23,5 @@ public:
 private:
   unzFile zipfile_;
   uint64_t uncompressed_size_ = 0;
-  unz_global_info global_info_;
+  unz_global_info global_info_{};
 };

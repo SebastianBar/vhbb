@@ -12,15 +12,15 @@
 class Input {
 	private:
 
-		SceCtrlData oldpad;
-		SceCtrlData pad;
+		SceCtrlData oldpad{};
+		SceCtrlData pad{};
 		
-		SceTouchData old2touch;
-		SceTouchData oldtouch;
-		SceTouchData touch;
+		SceTouchData old2touch{};
+		SceTouchData oldtouch{};
+		SceTouchData touch{};
 
 		void handleAnalogSticks();
-		unsigned int repeatMask;
+		unsigned int repeatMask{};
 		void handleRepeatPress();
 
 	public:
