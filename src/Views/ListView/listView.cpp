@@ -152,9 +152,8 @@ int ListView::HandleInput(int focus, const Input& input)
 				}
 
 				double touchDifY;
-				unsigned long timeDif2;
 
-				input.TouchDifference(nullptr, &touchDifY, &timeDif2);
+				input.TouchDifference(nullptr, &touchDifY, &timeDif);
 				posY = std::min(std::max<int>(ITEM_HEIGHT*listItems.size() - LIST_HEIGHT, 0),
 								std::max<int>(0, posY - touchDifY));
 				scrollSpeed = -touchSpeedY;
