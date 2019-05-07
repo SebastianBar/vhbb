@@ -4,10 +4,10 @@
 #include <psp2/kernel/processmgr.h>
 
 void StartNoSleepThread() {
-  SceUID thid_sleep = sceKernelCreateThread(
+  SceUID this_sleep = sceKernelCreateThread(
   		"nosleep_thread", (SceKernelThreadEntry)nosleep_thread, 0x40, 0x1000, 0,
   		0, nullptr);
-  sceKernelStartThread(thid_sleep, 0, nullptr);
+  sceKernelStartThread(this_sleep, 0, nullptr);
 }
 
 int nosleep_thread(SceSize args, void *argp) {
