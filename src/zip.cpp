@@ -7,7 +7,7 @@
 
 #include <minizip/unzip.h>
 
-#define dir_delimter '/'
+#define DIR_DELIMITER '/'
 #define MAX_FILENAME 512
 #define READ_SIZE 8192
 
@@ -111,7 +111,7 @@ int Zipfile::Unzip(const std::string outpath, InfoProgress *progress)
 
         // Check if this entry is a directory or file.
         const size_t filename_length = strlen(fullfilepath);
-        if (fullfilepath[filename_length-1] == dir_delimter)
+        if (fullfilepath[filename_length-1] == DIR_DELIMITER)
         {
             log_printf(DBG_DEBUG, "dir:%s", fullfilepath);
             //sceIoMkdir(fullfilepath, 0777);
