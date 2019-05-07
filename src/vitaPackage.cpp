@@ -4,7 +4,7 @@
 #include "filesystem.h"
 
 #include <psp2/promoterutil.h>
-
+ #include <utility>
 #define ntohl __builtin_bswap32
 
 extern unsigned char _binary_assets_head_bin_start;
@@ -183,8 +183,8 @@ int makeHeadBin()
     return 0;
 }
 
-VitaPackage::VitaPackage(const std::string& vpk) :
-    vpk_(vpk)
+VitaPackage::VitaPackage(std::string  vpk) :
+    vpk_(std::move(vpk))
 {
 
     // ScePaf is required for PromoterUtil

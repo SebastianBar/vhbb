@@ -21,7 +21,7 @@ public:
     Network();
     ~Network();
 
-    int Download(std::string url, std::string dest, InfoProgress progress);
+    int Download(const std::string& url, const std::string& dest, InfoProgress progress);
     int Download(const std::string& url, const std::string& dest, InfoProgress *progress = nullptr);
 
     InternetStatus TestConnection();

@@ -30,8 +30,8 @@ public:
 	IMEView();
 	static void openIMEView(std::shared_ptr<IMEViewResult> result, std::string title,
 	                        SceUInt32 maxInputLength);
-	static void openIMEView(std::shared_ptr<IMEViewResult> result, std::string title,
-	                        std::string initialText = "", SceUInt32 maxInputLength = SCE_IME_DIALOG_MAX_TEXT_LENGTH);
+	static void openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title,
+	                        const std::string& initialText = "", SceUInt32 maxInputLength = SCE_IME_DIALOG_MAX_TEXT_LENGTH);
 	static void closeIMEView();
 	~IMEView() override;
 

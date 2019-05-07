@@ -160,9 +160,9 @@ int Network::Download(const std::string& url, const std::string& dest, InfoProgr
     return 0;
 }
 
-int Network::Download(std::string url, std::string dest, InfoProgress progress)
+int Network::Download(const std::string& url, const std::string& dest, InfoProgress progress)
 {
-    return Download(std::move(url), std::move(dest), &progress);
+    return Download(url, dest, &progress);
 }
 
 InternetStatus Network::TestConnection()

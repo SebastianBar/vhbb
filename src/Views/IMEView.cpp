@@ -23,10 +23,10 @@ void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, std::string tit
 	openIMEView(std::move(result), std::move(title), "", maxInputLength);
 }
 
-void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, std::string title, std::string initialText,
+void IMEView::openIMEView(std::shared_ptr<IMEViewResult> result, const std::string& title, const std::string& initialText,
                           SceUInt32 maxInputLength) {
 	IMEView *imeView = IMEView::create_instance();
-	imeView->prepare(std::move(result), std::move(title), std::move(initialText), maxInputLength);
+	imeView->prepare(std::move(result), title, initialText, maxInputLength);
 	Activity::get_instance()->AddView(imeView->me_ptr);
 }
 
