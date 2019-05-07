@@ -6,6 +6,7 @@
 #include <global_include.h>
 
 #include <minizip/unzip.h>
+#include "infoProgress.h"
 
 #define DIR_DELIMITER '/'
 #define MAX_FILENAME 512
