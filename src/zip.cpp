@@ -107,7 +107,7 @@ int Zipfile::Unzip(const std::string& outpath, InfoProgress *progress)
             throw std::runtime_error("Error reading zip file info");
         }
 
-        sprintf(fullfilepath, "%s%s", outpath.c_str(), filename);
+        snprintf(fullfilepath, sizeof(fullfilepath), "%s%s", outpath.c_str(), filename);
 
         // Check if this entry is a directory or file.
         const size_t filename_length = strlen(fullfilepath);
